@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Posts;
+use App\Http\Controllers\Contacts;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,9 @@ Route::get('/posts/{post}/{slug}', [Posts::class, 'show'])
   ->where('post', '[1-9][0-9]*')
   ->where('slug', '[a-z0-9][a-z0-9\-]*')
   ->name('posts.show');
+
+// CONTACT PAGE
+// PATTERN: /contact
+// CTRL: Contacts
+// ACTION: form
+Route::get('/contact', [Contacts::class, 'form'])->name('contacts.form');
