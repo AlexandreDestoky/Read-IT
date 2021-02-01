@@ -32,6 +32,12 @@ Route::get('/', [Posts::class, 'index'])->name('blog');
 Route::get('/posts', [Posts::class, 'index'])->name('posts.index');
 
 
+// AJAX MORE POSTS
+// PATTERN: /posts/ajax/more
+// CTRL: Posts
+// ACTION: more
+Route::get('/posts/ajax/more/', [Posts::class, 'more'])->name('posts.ajax.more');
+
 // DETAILS D'UN POST
 // PATTERN: /posts/post/slug
 // CTRL: Posts
